@@ -21,11 +21,25 @@ h2{
 }
 form{
     width: 500px;
-    height: 350px;
+    height: 400px;
     border: 2px solid black;
     margin: 2rem auto;
     padding: 2rem;
     border-radius: 10px;
+    background-color: rgb(212, 198, 198);
+    
+}
+input{
+    height: 30px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 0 1rem;
+    font-size: 1rem;
+}
+label{
+    font-size: 1.1rem;
+    font-weight: 500;
+    
 }
 .form-group{
     display: flex;
@@ -40,7 +54,7 @@ form{
 }
 .form-image img{
   border-radius: 50%;
-  mix-blend-mode: color-burn;
+  /* mix-blend-mode: color-burn; */
 }
 .form-group-2{
     display: flex;
