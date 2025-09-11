@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #card{
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+            text-align: center;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 4px 5px 5px rgb(0,0,0,0.5);
+            background-color: lightblue;
+        }
+        .nav{
+            display: flex;
+            gap: 30px;
+        }
+        img{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            
+        }
+        h1{
+            margin: 0;
+            padding: 0;
+        }
+        #count{
+            font-size: 50px;
+            margin: 20px 0;
+            display: block;
+        }
+        button{
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 10px;
+            cursor: pointer;
+            background-color: lightgreen;
+            border: none;
+            border-radius: 5px;
+            border: 2px solid black;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="card">
+        <div class="nav">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzq8GjCC47Oc36dRD0eYudUpH7kmFxVK03Rg&s" alt="">
+        <h1>Counter APP</h1>
+        </div>
+        <span id="count">0</span>
+        <button onclick="add()">+</button>
+        <button onclick="sub()">-</button>
+    </div>
+    <script>
+        let count = 0;
+        function add() {
+            count++;
+            if(count > 10) {
+                alert(" max limit 10");
+                count = 10;
+            }
+            document.getElementById("count").innerText = count;
+        }
+        function sub() {
+            count--;
+            if(count < 0) {
+                alert(" min limit  0");
+                count = 0;
+            }
+            document.getElementById("count").innerText = count;
+        }
+    </script>
+</body>
+</html>
