@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        button{
+            padding: 10px 20px;
+            font-size: 20px;
+            margin: 20px;
+            cursor: pointer;
+            
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="changeColour('red')" ondblclick="resetColour()">Red</button>
+    <button onclick="changeColour('blue')" ondblclick="resetColour()">Blue</button>
+    <button onclick="changeColour('green')" ondblclick="resetColour()">Green</button>
+    <script>
+        function changeColour(colour) {
+            document.body.style.backgroundColor = colour;
+        }
+        function resetColour() {
+            document.body.style.backgroundColor = "";
+        }
+    </script>
+</body>
+</html>
