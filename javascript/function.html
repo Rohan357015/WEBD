@@ -4,21 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>function</title>
+    <style>
+        #adi{
+            width: 300px;
+            height: 200px;
+            border: 2px solid black;
+        }
+        button{
+            margin: 50% auto;
+            display: block;
+            padding: 10px 20px;
+            font-size: 20px;
+            background-color: lightblue;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: blue;
+            color: white;
+        }
+    </style>
 </head>
 <body>
+    <div id="adi">
+        <button onclick="ad()">click</button>
+        <p id="result"></p>
+    </div>
     <script>
-        var a = 10;
-        var b = 20;
-        function add(a,b){
-            return a + b;
+        // var a = 10;
+        // var b = 20;
+        // function add(a,b){
+        //     return a + b;
            
-        }
-        document.write(add(a,b));
+        // }
+        // document.write(add(a,b));
 
-        function sub(a,b){
-            return a - b;
+        // function sub(a,b){
+        //     return a - b;
+        // }
+        // document.write("<br>"+sub(b,a));
+        function ad(){
+            document.getElementById("result").innerHTML = "hello";
         }
-        document.write("<br>"+sub(b,a));
     </script>
 </body>
 </html>
