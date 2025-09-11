@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #card{
+            height: 500px;
+            width: 500px;
+            
+            display: flex;
+            flex-direction: column;
+            gap: 20%;
+        }
+        img{
+            height: 50%;
+            width: 100%;
+        }
+        button{
+           padding: 10px 20px;
+           margin: 10px auto;
+           font-size: 15px;
+           background-color:rgb(60, 60, 98);
+           color: white;
+           border-radius: 10px;
+           box-shadow: 2px 2px 3px black;
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="card">
+        <img src="../gettyimages-586890581.avif" alt="" id="image">
+        <button onclick="hide()">Hide</button>
+    </div>
+    <script>
+     
+    function hide() {
+        document.getElementById("image").style.display = "none";
+    }
+
+        
+    </script>
+</body>
+</html>
