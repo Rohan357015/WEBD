@@ -17,15 +17,12 @@
     </style>
 </head>
 <body>
-    <button onclick="changeColour('red')" ondblclick="resetColour()">Red</button>
-    <button onclick="changeColour('blue')" ondblclick="resetColour()">Blue</button>
-    <button onclick="changeColour('green')" ondblclick="resetColour()">Green</button>
+    <button onclick="changeColour('red')">Red</button>
+    <button onclick="changeColour('blue')">Blue</button>
+    <button onclick="changeColour('green')">Green</button>
     <script>
         function changeColour(colour) {
             document.body.style.backgroundColor = colour;
-        }
-        function resetColour() {
-            document.body.style.backgroundColor = "";
         }
     </script>
 </body>
