@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr1=[10];
+        let arr2=[10];
+        var a=prompt("Enter 1st Number");
+        var b=prompt("Enter 2nd number");
+        for(var i=1;i<=10;i++){
+            document.writeln(a*i+"<br>");
+            arr1[i]=a*i;
+        }
+        document.write("<br>")
+        for(var i=1;i<=10;i++){
+            document.writeln(b*i+"<br>");
+            arr2[i]=b*i;
+        }
+        document.write("<br>");
+        document.write("Even number :");
+        for(var i=1;i<=10;i++){
+            if(arr1[i]%2==0){
+                document.write(arr1[i]+" ");
+            }
+        }
+        document.write("<br>");
+        document.write("Odd number :");
+        for(var i=1;i<=10;i++){
+            if(arr2[i]%2!=0){
+                document.write(arr2[i]+" ");
+            }
+        }
+    </script>
+</body>
+</html>

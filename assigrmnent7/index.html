@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7</title>
+    <style>
+        #container{
+            height: 440px;
+            width: 840px;
+            display: flex;
+            background-color: #f0f0f0;
+            border-radius: 16px;
+        }
+        .cards{
+            height: 400px;
+            width: 400px;
+            margin: 20px;
+            background-color: aqua;
+            align-content: center;
+            padding: 20;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <Div class="cards" id="card1" ></Div>
+        <Div class="cards" id="card2"></Div>
+    </div>
+
+    <script>
+        const students = [
+            { name: "Alice", roll: 101, department: "IT" },
+            { name: "Bob", roll: 102, department: "IT" },
+            { name: "Charlie", roll: 103, department: "IT" },
+            { name: "David", roll: 104, department: "CSE" },
+            { name: "Eve", roll: 105, department: "CS" }
+        ];
+        for(var i=0;i<students.length;i++){
+            if(students[i].department=="IT") 
+                document.getElementById("card1").innerHTML += students[i].name + "<br>";
+            else 
+                document.getElementById("card2").innerHTML += students[i].name + "<br>";
+        }
+    </script>
+</body>
+
+</html>
