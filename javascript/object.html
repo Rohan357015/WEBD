@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <p id = " hi "></p>
+    <script>
+        const fruits = [
+            ["apple", 100], 
+            ["banana", 200], 
+            ["grapes", 300]
+        ]
+        const obj = Object.fromEntries(fruits);
+        document.getElementById("hi").innerHTML = obj;
+        const toy = {
+            toy1 : "car",
+            toy2 : "doll",  
+            toy3 : "teddy"
+        };
+        document.getElementById("demo").innerHTML = toy.toy1 + ", " + toy.toy2 + ", " + toy.toy3;
+    </script>
+</body>
+</html>
