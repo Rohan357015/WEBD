@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Phones</title>
+  <style>
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .phones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      
+    }
+    .phone {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      flex: 1 1 30%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      box-shadow: 4px 4px 4px rgb(148, 148, 148);
+    }
+    img {
+      max-width: 100px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>PHONE</h1>
+    <div class="phones" id="phones"></div>
+  </div>
+
+  <script>
+    const phones = [
+      { name: "I-PHONE", price: 999, img: "https://i.guim.co.uk/img/media/18badfc0b64b09f917fd14bbe47d73fd92feeb27/189_335_5080_3048/master/5080.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=1562112c7a64da36ae0a5e75075a0d12" },
+      { name: "SAMSUNG", price: 899, img: "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTGBLgryToLKYokLgf0qbhSIwg0SQKnvp1WxZfFkFKHrnwR8cYDurpR6Cg2vMnLHQaCK2zr_urlLrChY-OVZ5YLbnA-0Gmn4hjN-AeoXcOtT-xLObE6G4CUNA" },
+      { name: "ONEPLUS", price: 699, img: "https://image01-in.oneplus.net/media/202412/17/052a246708df8233d079b3502aeeb327.png" }
+    ];
+
+    const phonesContainer = document.getElementById("phones");
+
+    phones.forEach(phone => {
+      phonesContainer.innerHTML += `
+        <div class="phone">
+          <p>${phone.name}</p>
+          <p>${phone.price}</p>
+          <img src="${phone.img}" alt="${phone.name}">
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>
