@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      margin-top: 50px;
+      font-family: Arial, sans-serif;
+    }
+
+    .box-section {
+      display: flex;
+      gap: 20px;
+    }
+
+    .first, .second {
+      border: 2px solid black;
+      max-width: 400px;
+     
+      padding: 2rem;
+      border-radius: 10px;
+      background-color: rgb(168, 197, 187);
+      box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .first {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      margin: 20px;
+    }
+
+    input {
+      height: 30px;
+      border-radius: 5px;
+      border: 1px solid gray;
+      padding-left: 10px;
+    }
+
+    button {
+      height: 30px;
+      width: 30px;
+      border-radius: 5px;
+      border: none;
+      background-color: black;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    #submitbtn {
+      width: 100px;
+      height: 40px;
+      border-radius: 5px;
+      border: none;
+      background-color: black;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 1rem;
+    }
+
+    .second {
+      display: none; 
+      max-width: 400px;
+    }
+
+    ul {
+      padding: 20px;
+      list-style-type: none;
+    }
+
+    li {
+      margin-bottom: 10px;
+      padding: 5px;
+      background: white;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="box-section">
+    <section class="first">
+      <div class="navbar">
+        <img src="###" alt="">
+        <h1>To-Do List</h1>
+      </div>
+      <form id="form">
+        <div class="box">
+          <input type="text" placeholder="Add your task here" class="task">
+          <button onclick="addTask(event)" id="btn">+</button>
+        </div>
+      </form>
+      <button id="submitbtn" onclick="showAllTasks(event)">List of All</button>
+    </section>
+
+    <section class="second">
+      <h2 style="text-align:center; padding-top:10px;">Tasks</h2>
+      <ul id="taskList"></ul>
+    </section>
+  </div>
+
+  <script>
+    function addTask(event) {
+      event.preventDefault();
+      
+      const newTask = document.createElement("input");
+      const newbtn = document.createElement("button");
+      
+      newTask.className = "task"; 
+      newTask.type = "text";
+      newTask.placeholder = "Add your task here";
+      
+      newbtn.innerText = "+";
+      newbtn.onclick = addTask;
+      
+      const form = document.querySelector("#form");
+      const newbox = document.createElement("div");
+      newbox.className = "box";
+      newbox.appendChild(newTask);
+      newbox.appendChild(newbtn);
+      
+      form.appendChild(newbox);
+    }
+
+    function showAllTasks(event) {
+      event.preventDefault();
+      const allTasks = document.querySelectorAll(".task");
+      const ul = document.getElementById("taskList");
+      ul.innerHTML = ""; 
+
+      allTasks.forEach((task) => {
+        if (task.value.trim() !== "") {
+          const li = document.createElement("li");
+          li.innerText = task.value;
+          ul.appendChild(li);
+        }
+      });
+
+      document.querySelector(".second").style.display = "block";
+    }
+  </script>
+</body>
+</html>
