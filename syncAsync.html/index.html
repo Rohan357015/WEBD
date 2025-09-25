@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sync vs Async</title>
+</head>
+<body>
+    <script>
+        console.log("task 1");
+        console.log("task 2");
+        setTimeout(() => {
+            console.log("task 3");
+        }, 2000);
+        console.log("task 4");
+        console.log("task 5");
+    </script>
+    
+</body>
+</html>

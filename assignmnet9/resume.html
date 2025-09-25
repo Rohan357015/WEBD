@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>resume</title>
+</head>
+
+<style>
+    .box{
+        display: flex;
+        gap: 5rem;
+    }
+    li{
+        list-style-type: none;
+    }
+    .img{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        gap: 10px;
+    }
+    form{
+        margin: 30px;
+        padding: 20px;
+        width: 400px;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border: 2px solid black;
+    }
+    input{
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        padding-left: 10px;
+    }
+    button{
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        background-color: black;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    .resume{
+        margin: 30px;
+        padding: 20px;
+        width: 400px;
+        height: 400px;
+        border: 2px solid black;
+    }
+</style>
+<body>
+    <div class="box">
+
+        <form action="">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="name">
+            <label for="course">Course</label>
+            <input type="text" id="course" placeholder="course">
+           <label for="language1">Known Languages</label>
+           <input type="text" id="language1" placeholder="language">
+            <input type="text" id="language2" placeholder="language">
+             <input type="text" id="language3" placeholder="language">
+             <button onclick="generateResume()">Submit</button>
+        </form>
+
+        <div class="resume">
+            <div class="img">
+                <img src="../gettyimages-586890581.avif" alt="" height="50px" width="50px" style="border-radius: 50%; ">
+              <h1 id="name1"></h1>
+            </div>
+            
+            <h3 id="course1"></h3>
+            <h2>Known Languages</h2>
+            <ul>
+                <li id="language11"></li>
+                <li id="language22"></li>
+                <li id="language33"></li>
+            </ul>
+        </div>
+    </div>
+  <script>
+    function generateResume() {
+        event.preventDefault(); // Prevent form submission
+        const name = document.getElementById("name").value;
+        const course = document.getElementById("course").value;
+        const language1 = document.getElementById("language1").value;
+        const language2 = document.getElementById("language2").value;
+        const language3 = document.getElementById("language3").value;
+
+        document.getElementById("name1").innerText = name;
+        document.getElementById("course1").innerText = course;
+        document.getElementById("language11").innerText = language1;
+        document.getElementById("language22").innerText = language2;
+        document.getElementById("language33").innerText = language3;
+    }
+  </script>
+</body>
+</html>
