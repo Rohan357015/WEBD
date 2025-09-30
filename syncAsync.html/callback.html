@@ -24,12 +24,13 @@ getData("rohan", () => {
     });
 });
     
-    //     console.log(a+b);
-    //    }
-    //      function calc(a,b,callback){
-    //       callback(a,b);
-    //      }
-    //         calc(5,6,sum);
+    function num (num ,callback){
+        let n = num * 2;
+        callback(n);
+    }
+    num(2, (n) => {
+        console.log(n);
+    });
     </script>
 </body>
 </html>
