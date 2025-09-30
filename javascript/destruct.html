@@ -17,6 +17,15 @@
         console.log(name); 
         console.log(age); 
         console.log(location); 
+
+        let arr = {1,2,3,4,5};
+        const fun = ()=>{
+            //spread operator
+            let arr2 = [...arr];
+            for(let i of arr2){
+                console.log(i+1);
+            }
+        }
     </script>
 </body>
 </html>
