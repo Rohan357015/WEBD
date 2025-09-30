@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let promise = new Promise(function(resolve, reject) {
+        const password = '123456';
+        if (password.length > 6) {
+            resolve('Password is long ');
+        } else {
+            reject('Password is too short');
+        }
+    });
+
+        promise.then(function(message) {
+            console.log('This is in the then ' + message);
+        }).catch(function(message) {
+            console.log('This is in the catch ' + message);
+        });
+    </script>
+</body>
+</html>
