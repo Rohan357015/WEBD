@@ -4,16 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Book from './component/Book.jsx' 
 import "./component/Book.css"
+import Nav from './component/nav.jsx'
 
+import Routing from './component/link.jsx'
 function App() {
   
 
   return (
-    <div className='container'>
-      <Book title="Math" price="200" />
-      <Book title="Chemistry" price="400" />
-      <Book title="Physics" price="600" />
-    </div>
+    <>
+      <Routing />
+    </>
   )
 }
 
