@@ -8,8 +8,8 @@
     "start": "node server.js"
   },
   "keywords": [],
-  "type": "module",
-  "author": "",
+  "type": "commonjs",
+  "author": "rohan",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.1.11"
