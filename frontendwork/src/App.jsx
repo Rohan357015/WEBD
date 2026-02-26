@@ -1,28 +1,25 @@
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
+import "./box.css";
+import{ BrowserRouter,Route,Routes}from 'react-router-dom'
+import Login from "./login";
+import Register from "./register";
+import Home from "./home.jsx";
+import Dashboard from "./dashboard";
 
-
-
- function App(){
- const[data,setData] = useState([]);
-
-  useEffect(()=>{
-     async function getData(){
-      const response = await fetch('http://localhost:4005/data',{method:"POST"});
-      const res = await response.json();
-      setData(res);
-      }
-      getData();
-  },[]);
-    
- 
- 
-  return(
+function App() {
+  
+  return (
     <>
-    {JSON.stringify(data)
-    }
+     
+     <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+     </Routes>  
     </>
   )
- 
+
 }
 
 export default App;
